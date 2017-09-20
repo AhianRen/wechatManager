@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/weui.min.css" />
+	</head>
+	<style type="text/css">
+		.header{
+			background: #09BB07;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			color: #FFFFFF;
+		}
+		.headimg-con{
+			text-align: center;
+			margin-top: 5px;
+		}
+		#headimg{
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 50% 50% 50% 50%;
+			height: 100px;
+		}
+		.nickname-con{
+			text-align: center;
+		}
+		.bindmobile-con{
+			margin-top: 25px;
+		}
+	</style>
+	<body>
+		<div class="header">
+			<h3>借阅伴侣会员注册</h3>
+		</div>
+		<div class="headimg-con">
+			<img id="headimg" src="../img/defaultHeadImg.jpg" class="img-circle" />
+		</div>
+		<div class="nickname-con">
+			<h4 id="nickname">昵称</h4>
+		</div>
+		<div class="bindmobile-con">
+			<div class="weui-cells__title">请输入以下信息</div>
+	        <div class="weui-cell">
+	            <div class="weui-cell__hd"><label class="weui-label">手机号</label></div>
+	            <div class="weui-cell__bd">
+	                <input id="mobile" class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入号码"/>
+	            </div>
+	            <div class="weui-cell__ft">
+	                <button id="sendSMS-A" class="weui-vcode-btn">获取验证码</button>
+	            </div>
+	        </div>
+	        <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">短信验证码</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入验证码"/>
+                </div>
+                <div class="weui-cell__ft"  id="sms-warn" style="display: none;">
+                    <i class="weui-icon-warn" style="font-size: 16px;">验证码有误</i>
+                </div>
+            </div>
+	        <div class="weui-cell">
+	            <div class="weui-cell__hd"><label class="weui-label">请输入密码</label></div>
+	            <div class="weui-cell__bd">
+	                <input class="weui-input" type="password" placeholder="请输入登录密码"/>
+	            </div>
+	
+	        </div>
+        </div>
+
+        <div class="weui-btn-area">
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="confirm">确定</a>
+        </div>
+        
+        <!-- 导入js文件 -->
+		<script type="text/javascript" src="../js/jquery-1.12.3.min.js"  charset="utf-8"></script>
+		<script type="text/javascript" src="../js/static.js"  charset="utf-8"></script>
+		<script type="text/javascript" src="../js/register.js" charset="utf-8"></script>
+	</body>
+</html>

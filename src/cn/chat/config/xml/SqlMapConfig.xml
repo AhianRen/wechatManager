@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 加载java的配置文件或者声明属性信息 -->
+	<properties resource="db.properties">
+		<property name="db.properties" value="1"/>
+	</properties>
+	<typeAliases >
+	
+		<!-- 批量取别名  别名为该包下的类名 -->
+		<package name="cn.chat.lifemanage.po"></package>
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<!-- 配置JDBC事务控制，由mybatis进行管理 -->
+			<transactionManager type="JDBC"></transactionManager>
+			<!-- 配置数据源，采用mybatis连接池 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="${db.driver}" />
+				<property name="url" value="${db.url}" />
+				<property name="username" value="${db.username}" />
+				<property name="password" value="${db.password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<!-- 加载映射文件 -->
+	<mappers>
+		<!-- 批量加载映射文件  -->
+		<package name="cn.chat.lifemanage.mapper"></package>
+	</mappers>
+</configuration>
